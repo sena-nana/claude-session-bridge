@@ -1,0 +1,22 @@
+{
+  "name": "@local/claude-session-bridge",
+  "version": "1.0.0",
+  "private": false,
+  "license": "MIT",
+  "repository": { "type": "git", "url": "https://github.com/sena-nana/claude-session-bridge.git" },
+  "bugs": { "url": "https://github.com/sena-nana/claude-session-bridge/issues" },
+  "homepage": "https://github.com/sena-nana/claude-session-bridge",
+  "type": "module",
+  "description": "Import and browse Claude Code and Codex sessions.",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": ["README.md", "index.js", "client.js", "cordis.patch.yml", "locale/*.json", "icon.svg"],
+  "dsh": {
+    "bundle": { "patch": "./cordis.patch.yml" },
+    "client": { "platform": "web", "immediately": true, "inject": ["@deepseek-ai/dsh-client-ui-conversation"] }
+  }
+}

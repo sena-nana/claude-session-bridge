@@ -1,0 +1,4 @@
+- insert:
+    - id: claude-session-bridge
+      name: '@local/claude-session-bridge'
+      config: {}
